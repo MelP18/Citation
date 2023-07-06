@@ -118,14 +118,14 @@ body {
     margin: 0;
     box-sizing: border-box;
     z-index: 5;
-    color: white;
+    color: black;
     font-size: 14px;
     font-family: 'Montserrat-Regular';
 }
 
 body{
     overflow-x: hidden;
-    background-color: black;
+    background-color: #e1dddd;
 }
 a, a.active a:hover{
     text-decoration: none;
@@ -135,23 +135,278 @@ a, a.active a:hover{
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1140px;
-    
+    max-width: 1300px;
 }
+/*======================================> QUOTE <==================================*/
 .quote{
     padding: 25px;
     display: flex;
     align-items: center; 
     height: 100vh;
+    overflow-x: hidden;
 }
 .quote__content{
-    padding: 20px;
-    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    gap:25px; 
+    padding: 50px; 
     border-radius: 9px;
-    height: 80vh;
-    overflow-y: scroll;
+    box-shadow:0 0 5px 1px rgb(216, 215, 215); 
+    background-color: #f1f1f1;
 }
-.quote__content::-webkit-scrollbar {
+/*======================================> QUOTE LEFT <==================================*/
+.quote__left{
+    width: calc(100% - 500px);
+    background-color: rgb(198, 196, 196);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    box-shadow: 0 0 5px;
+}
+/*======================================> QUOTE LEFT TOP <==================================*/
+.quote__left__top{
+    display: flex;
+   justify-content: space-between;
+   gap:5px;
+   align-items: center;
+}
+.quote__top__left{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.quote__top__left__icone{
+    width: 30px;
+    height: 30px;
+}
+.quote__day{
+    margin-top: 35px;
+    text-align: right;
+}
+span.mdi-calendar-month{
+    font-size: 15px;
+    color: rgb(132, 17, 17);
+}
+/*======================================> QUOTE LEFT MIDDLE<==================================*/
+.quote__left__middle blockquote{
+    text-align: center;
+}
+.update__quote{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.quote__left__bottom {
+    display: flex;
+    gap:15px;
+    justify-content: center;
+    align-items: center;
+}
+.quote__left__bottom img{
+    width: 50px;
+    height: 50px;
+    border-radius: 35px;
+}   
+/*======================================> QUOTE LEFT BOTTOM<==================================*/
+.update__quote{
+    display: flex;
+    justify-content: space-between;
+}
+.quote__share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+}
+.quote__share button span.mdi-thumb-up-outline{
+    font-size:20px;
+    color: rgb(48, 48, 247);
+}
+.quote__split{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+}
+.quote__split button span.mdi-content-copy{
+    font-size:20px;
+    color: rgb(6, 1, 1);
+}
+.quote__split button span.mdi-share-variant-outline{
+    font-size:20px;
+    color: brown;
+}
+.update__quote button{
+    cursor: pointer;
+    color: black;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+   background-color: white;
+   border:1px solid white; 
+    border-radius: 9px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px;
+}
+.update__quote button:hover{
+    background-color: rgb(147, 145, 144);
+}
+.refresh button span.mdi-refresh{
+    font-size:20px;
+    color: brown;
+}
+.quote__right{
+    width: 500px;
+    height: 400px;
+    border: 1px solid royalblue;
+    background-image: url(Images/Feuille\ points.pdf);
+}
+.quote__right__backimg{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.quote__right__backimg img{
+    width: 45%;
+}
+.quote__right__backimg img:nth-child(1){
+    transform: rotate(70deg);
+}
+.quote__right__backimg img:nth-child(2){
+    transform: rotate(-35deg);
+     top:-20px; 
+}
+.quote__right__backimg img:nth-child(3){
+    transform: rotate(70deg);
+    top:-65px;
+    left: -25px;
+}
+.quote__right__backimg img:nth-child(4){
+    transform: rotate(40deg);
+    top:-15px;
+}
+.quote__right__img img{
+    width: 100px;
+}
+.quote__right__img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(14, 13, 13);
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+}
+.quote__right__img img{
+    object-fit: cover;
+    width: 100%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.split a{
+    color: black;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+   background-color: white;
+   border:1px solid white; 
+    border-radius: 9px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px;
+}
+.split a:hover{
+    background-color: rgb(147, 145, 144);
+}
+.split__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #00000057;
+    gap: 7px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40px;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .split__list:before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+  /*   top: -3px; */
+    left: -3px;
+    box-shadow: 0 0 -4px 1px #00000057;
+  }
+  
+  .split__list a {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    transition: 0.5s;
+  }
+  
+  .split__list a:hover {
+    background-color: #eee;
+  }
+  .split__list a span.mdi {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .split:hover .split__list {
+    opacity: 1;
+    visibility: visible;
+    top: -2px;
+    left: 11rem;
+  }
+  span.mdi-facebook {
+    color: rgb(4, 66, 132);
+  }
+  
+  span.mdi-telegram {
+    color: rgb(100, 166, 238);
+  }
+  
+  span.mdi-whatsapp {
+    color: rgba(51, 132, 4, 0.857);
+  }
+  
+  span.mdi-twitter {
+    color: rgb(31, 122, 220);
+  }
+  
+  span.mdi-instagram {
+    color: #c32aa3;
+  }
+  
+  span.mdi-share-variant-outline {
+    font-size: 20px;
+  }
+/* .quote__content::-webkit-scrollbar {
     width: 10px;
   }
   
@@ -162,7 +417,7 @@ a, a.active a:hover{
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
-}
+} 
 .quote__top{
     display: flex;
     justify-content: center;
@@ -216,4 +471,4 @@ a, a.active a:hover{
 .update__quote button span.mdi-refresh{
     font-size: 25px;
     color: brown;
-}
+}*/
