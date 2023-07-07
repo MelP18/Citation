@@ -2076,8 +2076,52 @@ if(btnReset){
        
     } )
 }
+/*===============================> QUOTE <==================================*/
+function aleatoireRandom (a) {
+    return a[Math.floor(Math.random() * a.length)];
+}
+const quote = document.querySelector('.quote__left__middle')
+var quoteTab = []
+if(citations ){
+    console.log(citations);
+    citations[0].forEach(item =>{
+        console.log(item);
+        const quoteLeft = 
+        `<blockquote id="quote">" ${item.description} "</blockquote>
+        <div class="quote__middle__bottom">
+            <img src="${item.image_url}" class="author__img" alt="">
+            <cite id="author">~~ ${item.author} ~~</cite>
+        </div>
+        `
+        quoteTab.push(quoteLeft)
+        console.log(quoteTab);
+        })
+    aleatoireRandom(quoteTab)
+    console.log(aleatoireRandom(quoteTab));
+    quote.innerHTML = aleatoireRandom(quoteTab)
+}
+/*===============================> REFRESH BTN <==================================*/
+const refresh = document.querySelector('.refresh-btn')
+refresh.addEventListener('click', (e)=>{
+    e.preventDefault()
+    quote.innerHTML = aleatoireRandom(quoteTab)
+})
 
-var randomIndex = Math.floor(Math.random() * citations[0].length)
+/*===============================> IMAGE ALEATOIRE <==================================*/
+const quoteImg = document.querySelector('.quote__right__img')
+var quoteImgTab = []
+if(images){
+    console.log(images);
+    images[0].forEach(item =>{
+        const quoteRightImg = `<img src="${item.image}" alt="">`
+        quoteImgTab.push(quoteRightImg)
+    })
+    aleatoireRandom(quoteImgTab)
+    quoteImg.innerHTML=(aleatoireRandom(quoteImgTab))
+}
+
+
+/* var randomIndex = Math.floor(Math.random() * citations[0].length)
 console.log(randomIndex)
 var randomImage = Math.floor(Math.random() * images[0].length)
 console.log(randomImage)
@@ -2110,5 +2154,5 @@ var showCit = document.querySelector('.main__citations')
         if (showIm) {
             showIm.insertAdjacentHTML('beforeend', showImage)
         }
-    }
+    } */
 
