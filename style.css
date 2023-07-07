@@ -141,25 +141,24 @@ a.active a:hover {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1140px;
+    max-width: 1300px;
 }
 
 /*======================================> QUOTE <==================================*/
 .quote {
-    padding: 25px;
+   /*  padding: 25px; */
+    height: 100vh;
     display: flex;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
     overflow-x: hidden;
 }
-
 .quote__content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 25px;
-    padding: 50px;
+   /*  gap: 25px; */
+   padding: 50px;
     border-radius: 9px;
     border: 2.5px solid;
     border-left-color: #F1C21B;
@@ -170,21 +169,39 @@ a.active a:hover {
       background-color: white; 
   /*   background-color: #e2efff; */
 }
-
+@media(max-width:1094px){
+    .quote {
+        height: auto;
+    }
+    .quote__content {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px  50px;
+    }
+    .quote__right{
+        top:25px;
+        right:-50px;
+    }
+    .quote__left{
+        top:-50px;
+        left:-50px;
+    }
+}
 /*======================================> QUOTE LEFT <==================================*/
 .quote__left {
     /*   width: calc(100% - 550px);  */
-    width: 500px;
-    height: 340px;
+    width: 480px;
+    height: 380px;
     background-color: rgb(212, 209, 209);
     display: flex;
     padding: 0 5px;
-    /*  align-items: center;
-    justify-content: center; */
     overflow-y: scroll;
+   /*top:60px;
+    left:-50px */
 }
 
 .quote__left__content {
+    object-fit: cover;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -192,15 +209,11 @@ a.active a:hover {
     gap: 10px;
     padding: 0 5px;
 }
-
 .quote__left::-webkit-scrollbar {
     width: 4px;
 }
-
 .quote__left::-webkit-scrollbar-thumb {
-    background-color:
-        /*  rgb(114, 111, 111) */
-        #B2A4A4;
+    background-color:#B2A4A4;
     border-radius: 25px;
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -208,7 +221,6 @@ a.active a:hover {
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
 }
-
 /*======================================> QUOTE LEFT TOP <==================================*/
 .quote__left__top {
     display: flex;
@@ -216,118 +228,97 @@ a.active a:hover {
     gap: 5px;
     align-items: center;
 }
-
 .quote__day {
     white-space: nowrap;
 }
-
 .quote__day span.mdi-calendar-month {
     color: rgb(132, 17, 17);
 }
-
 .quote__left__select {
     padding: 5px;
     background-color: rgb(178, 164, 164);
     border-radius: 35px;
 }
-
 .quote__left__select select {
     background-color: transparent;
     border: none;
     outline: 0;
 }
-
 .quote__top__title {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
 }
-
 .quote__top__title__icone {
     width: 30px;
     height: 30px;
 }
-
 /*======================================> QUOTE LEFT MIDDLE<==================================*/
 .quote__top__title h4 {
     font-family: 'Aclonica';
 }
-
 .quote__left__middle {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 25px;
+    margin: 25px 0;
 }
-
 .quote__left__middle blockquote {
     text-align: center;
     line-height: 25px;
     width: 100%;
     font-family: 'Montserrat-Italic';
 }
-
 .update__quote {
     display: flex;
-    /* justify-content: right; */
     align-items: center;
 }
-
 .quote__middle__bottom {
     display: flex;
     gap: 15px;
     justify-content: center;
     align-items: center;
 }
-
 .quote__middle__bottom img {
     width: 50px;
     height: 50px;
     border-radius: 35px;
 }
-
 .quote__middle__bottom cite {
     font-family: 'Aclonica';
 }
-
 /*======================================> QUOTE LEFT BOTTOM<==================================*/
 .update__quote {
     display: flex;
     justify-content: space-between;
 }
-
 .quote__share {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
 }
-
 .quote__share button span.mdi-thumb-up-outline {
     font-size: 17px;
     color: rgb(48, 48, 247);
 }
-
 .quote__split {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
 }
-
 .quote__split button span.mdi-content-copy {
     font-size: 17px;
     color: rgb(6, 1, 1);
 }
-
 .quote__split button span.mdi-share-variant-outline {
     font-size: 17px;
     color: brown;
 }
-
 .update__quote button {
     cursor: pointer;
     color: black;
@@ -342,52 +333,46 @@ a.active a:hover {
     align-items: center;
     box-shadow: 0 0 5px;
 }
-
 .update__quote button:hover {
     background-color: rgb(147, 145, 144);
 }
-
 .refresh button span.mdi-refresh {
     font-size: 17px;
     color: brown;
 }
-
 /*=================================> QUOTE RIGHT <====================*/
 .quote__right {
     width: 500px;
     height: 400px;
-    background-image: url(Images/Feuille\ points.pdf);
-
+   /*  border:0.1px solid rgb(132, 17, 17);
+    border-left:dotted rgb(132, 17, 17);
+    border-bottom:dotted rgb(132, 17, 17);
+    border-top-left-radius:35px;
+    border-bottom-right-radius:35px; */
 }
-
 .quote__right__backimg {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
 }
-
 .quote__right__backimg img {
     width: 45%;
 }
-
 .quote__right__backimg img:nth-child(1) {
     transform: rotate(-8deg);
     top: 14rem;
 }
-
 .quote__right__backimg img:nth-child(2) {
     transform: rotate(30deg);
     top: 14px;
     left: -30px;
 }
-
 .quote__right__backimg img:nth-child(3) {
     transform: rotate(-90deg);
     top: -65px;
     left: -15px;
 }
-
 .quote__right__backimg img:nth-child(4) {
     transform: rotate(55deg);
     top: -15rem;
@@ -496,7 +481,6 @@ span.mdi-whatsapp {
 span.mdi-twitter {
     color: rgb(31, 122, 220);
 }
-
 span.mdi-instagram {
     color: #c32aa3;
 }
