@@ -2087,7 +2087,12 @@ if(citations ){
     citations[0].forEach(item =>{
         console.log(item);
         const quoteLeft = 
-        `<blockquote id="quote">" ${item.description} "</blockquote>
+        `
+        <div class="quote__top__title">
+            <img src="Images/smiley.png" class="quote__top__title__icone" alt="">
+            <h4> Commence ta journée avec la bonne humeur!</h4>
+         </div>
+        <blockquote id="quote">" ${item.description} "</blockquote>
         <div class="quote__middle__bottom">
             <img src="${item.image_url}" class="author__img" alt="">
             <cite id="author">~~ ${item.author} ~~</cite>
