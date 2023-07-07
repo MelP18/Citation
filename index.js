@@ -2100,13 +2100,6 @@ if(citations ){
     console.log(aleatoireRandom(quoteTab));
     quote.innerHTML = aleatoireRandom(quoteTab)
 }
-/*===============================> REFRESH BTN <==================================*/
-const refresh = document.querySelector('.refresh-btn')
-refresh.addEventListener('click', (e)=>{
-    e.preventDefault()
-    quote.innerHTML = aleatoireRandom(quoteTab)
-})
-
 /*===============================> IMAGE ALEATOIRE <==================================*/
 const quoteImg = document.querySelector('.quote__right__img')
 var quoteImgTab = []
@@ -2119,6 +2112,15 @@ if(images){
     aleatoireRandom(quoteImgTab)
     quoteImg.innerHTML=(aleatoireRandom(quoteImgTab))
 }
+/*===============================> REFRESH BTN <==================================*/
+const refresh = document.querySelector('.refresh-btn')
+refresh.addEventListener('click', (e)=>{
+    e.preventDefault()
+    quote.innerHTML = aleatoireRandom(quoteTab)
+    quoteImg.innerHTML=(aleatoireRandom(quoteImgTab))
+})
+
+
 
 
 /* var randomIndex = Math.floor(Math.random() * citations[0].length)
