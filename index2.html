@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style (copie).css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
     <title>Document</title>
 </head>
@@ -12,54 +12,35 @@
 <body>
     <div class="block">
         <main>
-            <div class="quotation">
-               <!--  <div class="quote__right__backimg">
-                    <!-- <img src="Images/3.svg" alt="">
-                    <img src="Images/4.svg" alt="">
-                    <img src="Images/2.svg" alt="">
-                    <img src="Images/4.svg" alt=""> -->
-                    <!-- <img src="Images/11.png" alt="">
-                    <img src="Images/12.png" alt=""> --
-                </div> --> 
+            <div class="quote">
                 <div class="container">
-                    <div class="quote">
-                            <div class="quote__content">
-                                <div class="quote__top">
+                    <div class="quote__content">
+                        <div class="quote__left">
+                            <div class="quote__left__content">
+                                <div class="quote__left__top">
                                     <div class="quote__day">
-                                        <span class="mdi mdi-moon-waning-crescent" id="lune"></span>
                                         <span class="mdi mdi mdi-calendar-month"> 15-12-2023</span>
                                     </div>
-                                    <div class="quote__select">  
+                                    <div class="quote__left__select">
                                         <select name="" id="">
                                             <option value="">Choisir un thème</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="quote__middle">
-                                    <div class="quote__top__title"> 
-                                        <h4> Commence ta journée avec la bonne humeur!<img src="Images/smiley.png" class="quote__top__title__icone" alt=""></h4>
-                                        
-                                    </div>
-                                    <div class="quote__info">
-                                        <div class="quote__right__img">
-                                            <img src="Images/image(6).png" alt="">
-                                           
-                                        </div>
-                                        <div class="quote__sentences">
-                                            <blockquote id="quote">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit. Sint in
-                                                cupiditate officia asperiores quam maxime tenetur at sit, id dolorum.
-                                                Possimus tenetur
-                                                laudantium expedita nulla rerum. Odio voluptatem inventore obcaecati.
-                                            </blockquote>
-                                            <div class="quote__author">
-                                                <cite>~~ Prisca ~~</cite>
-                                            </div>
-                                           
-                                        </div>
-                                    </div>
+                                <div class="quote__left__middle">
+                                    <!-- <div class="quote__top__title">
+                                        <img src="Images/smiley.png" class="quote__top__title__icone" alt="">
+                                        <h4> Commence ta journée avec la bonne humeur!</h4>
+                                    </div> -->
+                                    <!--  <blockquote id="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint in
+                                        cupiditate officia asperiores quam maxime tenetur at sit, id dolorum. Possimus tenetur
+                                        laudantium expedita nulla rerum. Odio voluptatem inventore obcaecati.
+                                    </blockquote> -->
+                                    <!-- <div class="quote__middle__bottom">
+                                        <img src="Images/image(11).webp" class="author__img" alt="">
+                                        <cite id="author">~~ Priscy ~~</cite>
+                                    </div> -->
                                 </div>
-                                <hr>
                                 <div class="update__quote">
                                     <div class="quote__share">
                                         <button><span class="mdi mdi-thumb-up-outline"></span></button>
@@ -89,6 +70,7 @@
                                                     </a>
                                                 </div>
                                             </div>
+                                            <!--  <button><span class="mdi mdi-share-variant-outline"></span></button> -->
                                         </div>
                                     </div>
                                     <div class="refresh">
@@ -96,14 +78,45 @@
                                     </div>
                                 </div>
                             </div>
-                        
+                        </div>
+                        <div class="quote__image">
+                            <div class="quote__right">
+                                <div class="quote__right__backimg">
+                                    <img src="Images/1.svg" alt="">
+                                    <img src="Images/2.svg" alt="">
+                                    <img src="Images/3.svg" alt="">
+                                    <img src="Images/4.svg" alt="">
+                                </div>
+                                <div class="quote__right__img">
+                                    <!-- <img src="Images/image(10).jpg" alt=""> -->
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
+    <!--   <main class="main">
+        <div class="main_container">
+            <div class="main__text">
+                <p>
+                    Pour que ta journée soit plus belle chaque jour.
+                </p>
+                <div class="main__img">
+                 
+                </div>
+            </div>
+            <div class="main__citations">
+                <div class="main_citations_content">
+                    <p id="citation"></p>
+                    <h4 id="author"></h4>
+                </div>
+            </div>
+         <!--    <button id="btnreset">Rafraichir</button> 
+        </div>
+    </main> -->
 </body>
-
+<script src="index.js"></script>
 
 </html>
