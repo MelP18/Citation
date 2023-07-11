@@ -1,4 +1,18 @@
+/*=====================================++> DARK MODE <====================================*/
+const lune = document.getElementById('lune');
+lune.addEventListener('click', () => {
+   const quote = document.querySelector('.quote');
 
+   if (quote.classList.contains('dark')) {
+      quote.classList.add('light');
+      quote.classList.remove('dark')
+      /*  theme.innerHTML('Go Dark') */
+   } else if (quote.classList.contains('light')) {
+      quote.classList.add('dark');
+      quote.classList.remove('light')
+      /*  theme.innerHTML('Go Light') */
+   }
+})
 
 const citations = [
     [
