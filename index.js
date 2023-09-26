@@ -1,18 +1,33 @@
 /*=====================================++> DARK MODE <====================================*/
-const lune = document.getElementById('lune');
+const lune = document.querySelector('.quote__day span.mdi-moon-waning-crescent')
+console.log(lune);
 lune.addEventListener('click', () => {
-   const quote = document.querySelector('.quote');
-
-   if (quote.classList.contains('dark')) {
-      quote.classList.add('light');
-      quote.classList.remove('dark')
-      /*  theme.innerHTML('Go Dark') */
-   } else if (quote.classList.contains('light')) {
-      quote.classList.add('dark');
-      quote.classList.remove('light')
-      /*  theme.innerHTML('Go Light') */
+   const quote = document.querySelector('.quote')
+   console.log(quote);
+   if(quote){
+        if(quote.classList.contains('light')){
+            quote.classList.add('active')
+            quote.classList.remove('light')
+            lune.classList.add('active')
+        }else{
+            quote.classList.remove('active')
+            quote.classList.add('light')
+            lune.classList.remove('active')
+        }
    }
 })
+/*=======================================> DATE <=================================*/
+let date = new Date ();
+console.log(date);
+let showDate = document.querySelector('.quote__day .date')
+console.log(showDate);
+let newDate  = date.toLocaleString('fr-FR',{
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric'
+})
+console.log(newDate);
+showDate.innerHTML += newDate
 
 const citations = [
     [
@@ -1778,7 +1793,7 @@ const citations = [
         },
     ]
 ]
-
+console.log(citations);
 const images = [
     [
         {
@@ -2082,45 +2097,36 @@ const images = [
 ]
 
 
-const btnReset = document.getElementById('btnreset')
 
-if(btnReset){
-    btnReset.addEventListener('click', (e) => {
-        e.preventDefault()
-       
-    } )
-}
 /*===============================> QUOTE <==================================*/
 function aleatoireRandom (a) {
     return a[Math.floor(Math.random() * a.length)];
 }
-const quote = document.querySelector('.quote__left__middle')
+const quote = document.querySelector('.quote__info')
 var quoteTab = []
 if(citations ){
     console.log(citations);
     citations[0].forEach(item =>{
-        console.log(item);
         const quoteLeft = 
         `
-        <div class="quote__top__title">
-            <img src="Images/smiley.png" class="quote__top__title__icone" alt="">
-            <h4> Commence ta journée avec la bonne humeur!</h4>
-         </div>
-        <blockquote id="quote">" ${item.description} "</blockquote>
-        <div class="quote__middle__bottom">
-            <img src="${item.image_url}" class="author__img" alt="">
-            <cite id="author">~~ ${item.author} ~~</cite>
+        <div class="quote__right__img">
+            <img src=""${item.image_url}" alt="">
+        </div>
+        <div class="quote__sentences">
+            <blockquote id="quote"> ${item.description} </blockquote>
+            <div class="quote__author">
+                <cite>~~ ${item.author} ~~</cite>
+            </div>
         </div>
         `
         quoteTab.push(quoteLeft)
-        console.log(quoteTab);
+      /*   console.log(quoteTab); */
         })
-    aleatoireRandom(quoteTab)
-    console.log(aleatoireRandom(quoteTab));
-    quote.innerHTML = aleatoireRandom(quoteTab)
+
+    quote.innerHTML = aleatoireRandom(quoteTab) 
 }
 /*===============================> IMAGE ALEATOIRE <==================================*/
-const quoteImg = document.querySelector('.quote__right__img')
+/* const quoteImg = document.querySelector('.quote__right__img')
 var quoteImgTab = []
 if(images){
     console.log(images);
@@ -2130,15 +2136,16 @@ if(images){
     })
     aleatoireRandom(quoteImgTab)
     quoteImg.innerHTML=(aleatoireRandom(quoteImgTab))
-}
+} */
 /*===============================> REFRESH BTN <==================================*/
-const refresh = document.querySelector('.refresh-btn')
-refresh.addEventListener('click', (e)=>{
-    e.preventDefault()
-    quote.innerHTML = aleatoireRandom(quoteTab)
-    quoteImg.innerHTML=(aleatoireRandom(quoteImgTab))
-})
+const btnReset = document.querySelector('.refresh-btn')
 
+if(btnReset){
+    btnReset.addEventListener('click', (e) => {
+        e.preventDefault()
+        quote.innerHTML = aleatoireRandom(quoteTab)
+    } )
+}
 
 
 

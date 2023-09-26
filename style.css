@@ -21,23 +21,14 @@
     z-index: 5;
     color: white;
     color: black;
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'Montserrat-Regular';
 }
 body {
     overflow-x: hidden;
-    background-color: /* rgb(212, 209, 209) */ rgb(157, 153, 153);
+    background-color: /* rgb(212, 209, 209) */ rgb(157, 153, 153); 
 }
-.quote.dark {
-    background: #333;
-    color: #f1f1f1;
-  }
-  .quote.dark p {
-    color: #f0eeed;
-  }
-  .quote.dark #lune {
-    color: #f1f1f1;
-  }
+
 a,
 a.active a:hover {
     text-decoration: none;
@@ -67,44 +58,9 @@ a.active a:hover {
  .quote__right__backimg img {
     width: 20%;
 }
-/*  .quote__right__backimg img:nth-child(1) {
-    transform: rotate(-63deg);
-    top: 15rem;
-    left:6rem; 
-  display: flex;
-    justify-content: left;
-}
-.quote__right__backimg img:nth-child(2) { 
-     transform: rotate(-30deg);
-    top: -17rem;
-    left: -6rem;
-    display: flex;
-    justify-content: right; 
-    
-} */ 
-/* .quote__right__backimg img:nth-child(3) {
-    transform: rotate(-15deg);
-top: -15rem; 
-    left: 25rem;
-   
-}
-.quote__right__backimg img:nth-child(4) {
-    transform: rotate(55deg);
-    top: -16rem;
-    right: -25px;
-}   */
-
 /*======================================> QUOTE LEFT <==================================*/
 .quote{
-   /*  background-color: rgb(212, 209, 209); */
-    /*display: flex;
-    padding: 0 15px;
-     overflow-y: scroll; */
-     background-color: rgb(54, 52, 52);
-     background-color: white;
-  /* display: flex;
-   justify-content: space-between; 
-   align-items: center;*/
+background-color: white;
   padding: 20px;
    border-radius: 9px;
    border: 2.5px solid;
@@ -112,9 +68,21 @@ top: -15rem;
    border-bottom-color: #F1C21B;
    border-top-color: #08BDBA;
    border-right-color: #08BDBA;
-box-shadow: 0 0 10px 0px rgb(128, 124, 124);
+    box-shadow: 0 0 10px 0px rgb(128, 124, 124);
 }
-
+.quote.active{
+    background-color: rgb(54, 52, 52);
+}
+.quote.active h4{
+    color: white;
+}
+.quote.active blockquote{
+    color: white;
+}
+.quote.active cite{
+    color: white;
+    font-weight: bold;
+}
 .quote::-webkit-scrollbar {
     width: 4px;
 }
@@ -143,10 +111,15 @@ box-shadow: 0 0 10px 0px rgb(128, 124, 124);
     padding: 10px;
 }
 .quote__day span.mdi-moon-waning-crescent{
-    font-size: 25px;
+    cursor:pointer;
+    font-size: 30px;
     color: rgb(54, 52, 52);;
 }
+.quote__day span.mdi-moon-waning-crescent.active{
+    color: white;
+}
 .quote__day span.mdi-calendar-month {
+    font-size: 15px;
     color: /* rgb(132, 17, 17)  */ #08BDBA;
     font-weight:bold;
 }
@@ -166,7 +139,6 @@ box-shadow: 0 0 10px 0px rgb(128, 124, 124);
     .quote__top{
         flex-direction: column;
     }
-    
 }
 /*======================================> QUOTE LEFT MIDDLE<==================================*/
 
@@ -249,6 +221,9 @@ hr{
     .quote__sentences{
         width: 100%;
     }
+    .quote__sentences blockquote{
+        text-align: justify;
+    } 
 }
 /*======================================> QUOTE LEFT BOTTOM<==================================*/
 .update__quote {
