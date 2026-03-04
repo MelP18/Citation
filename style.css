@@ -33,12 +33,23 @@ a,
 a.active a:hover {
     text-decoration: none;
 }
-.container {
+/* .container {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1140px;
+} */
+ .container {
+   padding: 20px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    width: 80%;
+}
+@media(max-width:465px){
+    .container{
+        width: 100%;
+    }
 }
 /*======================================> QUOTE <==================================*/
 .quotation {
@@ -46,7 +57,7 @@ a.active a:hover {
     align-items: center;
     justify-content:center; 
    min-height: 100vh;
-  padding: 5px 0;
+  padding: 15px;
    border: 1px solid;
 }
 .quote__right__backimg {
@@ -61,13 +72,13 @@ a.active a:hover {
 /*======================================> QUOTE LEFT <==================================*/
 .quote{
 background-color: white;
-  padding: 20px;
+  padding: 35px;
    border-radius: 9px;
-   border: 2.5px solid;
-   border-left-color: #F1C21B;
-   border-bottom-color: #F1C21B;
-   border-top-color: #08BDBA;
-   border-right-color: #08BDBA;
+   border: 5px solid;
+   border-left-color: #eba165;
+   border-bottom-color: #eba165;
+   border-top-color: #e7776f;
+   border-right-color: #e7776f;
     box-shadow: 0 0 10px 0px rgb(128, 124, 124);
 }
 .quote.active{
@@ -112,20 +123,35 @@ background-color: white;
 }
 .quote__day span.mdi-moon-waning-crescent{
     cursor:pointer;
-    font-size: 30px;
-    color: rgb(54, 52, 52);;
+    font-size: 20px;
+    color: rgb(54, 52, 52);
+    padding: 3px 5px;
+    border-radius:15px;
+    background-color: #fae5e5;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.quote__day span.mdi-weather-sunny{
+    cursor:pointer;
+    font-size: 25px;
+    color: rgb(238, 170, 43);
+    padding: 3px 5px;
+    border-radius:15px;
+    background-color: #fcf9f9;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
 }
 .quote__day span.mdi-moon-waning-crescent.active{
     color: white;
 }
 .quote__day span.mdi-calendar-month {
     font-size: 15px;
-    color: /* rgb(132, 17, 17)  */ #08BDBA;
+    color: #08BDBA;
     font-weight:bold;
 }
+
 .quote__select {
     padding: 5px;
-    background-color:/*  rgb(178, 164, 164) */ #08BDBA;
+    background-color: #08BDBA;
     border-radius: 35px;
 }
 .quote__select select {
@@ -154,6 +180,8 @@ background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .quote__top__title__icone {
     width: 25px;
@@ -162,26 +190,32 @@ background-color: white;
 .quote__top__title h4 {
     font-family: 'Aclonica';
     text-align: center;
-    
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(132, 17, 17);
+    font-size: 25px;
 }
 .quote__info{
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    padding: 15px;
+    /* justify-content:space-between; */
+    justify-content: center;
+    padding: 30px 15px;
 }
 .quote__right__img {
+    margin: auto;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: auto;
     height: 200px;
     padding: 15px;
-    border-radius: 100%;
+    border: none;
  }
  .quote__right__img img {
     width: 100%;
     height: 100%;
-     object-fit: contain;
+    object-fit: contain;
+     border: none;
      
  }
  .quote__sentences{
@@ -189,27 +223,35 @@ background-color: white;
     display: flex;
     flex-direction: column;
     gap: 15px;
+      user-select: none;        /* Standard */
+  -webkit-user-select: none; /* Chrome / Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Edge */
  }
 .quote__sentences blockquote {
     text-align: center;
-    line-height: 25px;
+    line-height: normal;
     font-family: 'Montserrat-Italic';
+    font-size: 18px;
 }
 
 .quote__author{
     display: flex;
     justify-content: right;
     padding: 15px;
+} 
+.quote__author cite{ 
+    font-family: 'Montserrat-Italic';
+    font-size: 18px;
+    font-weight: 600;
 }
 .update__quote {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 20px 0 0 0;
 }
-hr{
-    border:1.5px solid  rgb(157, 153, 153);
-}
+
 @media(max-width:601px){
     .quote__info{
         flex-direction: column;
@@ -258,36 +300,53 @@ hr{
     cursor: pointer;
     color: black;
     padding: 5px;
-    width: 30px;
-    height: 30px;
+   
     background-color: white;
-    border: 1px solid white;
+    border: none;
     border-radius: 9px;
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    /* box-shadow: 0 0 5px; */
+}
+.update__quote button span{
+ width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 5px;
+    font-size: 18px;
+    color: coral;
 }
 .update__quote button:hover {
-    background-color: /* rgb(147, 145, 144) */ #F1C21B;;
+    background-color: #f5e6b0;;
 }
+.refresh{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    gap: 25px;
+
+}
+
 .refresh button span.mdi-refresh {
-    font-size: 17px;
+    font-size: 20px;
     color: brown;
 }
 /*=================================> SPLIT PARTAGER BTN <====================*/
 .split a {
     color: black;
     padding: 5px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     border: 1px solid white;
     border-radius: 9px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
 }
 .split a:hover {
     background-color:/*  rgb(147, 145, 144) */ #F1C21B;;
